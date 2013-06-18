@@ -233,6 +233,24 @@ symlink("toolbox", "/system/bin/vmstat");
 symlink("toolbox", "/system/bin/watchprops");
 symlink("toolbox", "/system/bin/wipe");
 
+#Sound Mods
+if
+		file_getprop("/tmp/aroma-data/msound.prop","item.0.1") == "1"
+	then
+	ui_print("- Flashing Beats Audio Engine...");
+		package_extract_dir("soundmods/beatsaudio/bin", "/system/bin");
+		package_extract_dir("soundmods/beatsaudio/etc", "/system/lib");
+		package_extract_dir("soundmods/beatsaudio/lib", "/system/lib");
+	endif;
+
+if
+		file_getprop("/tmp/aroma-data/msound.prop","item.0.2") == "1"
+	then
+	ui_print("- Flashing Viper Sound Engine...");
+	    package_extract_dir("soundmods/vipersound/app", "/system/app");
+		package_extract_dir("soundmods/vipersound/lib", "/system/lib");
+	endif;
+
 #System Sounds	
 if
 		file_getprop("/tmp/aroma-data/zsounds.prop","selected.0") == "1"

@@ -43,6 +43,15 @@ agreebox(
 	"Please read the informations before flashing!"
 );
 
+checkbox(
+  "Sound mods",
+  "Select your favourite Sound mods",
+  "icons/apps",
+  "msound.prop",
+  "Beatsaudio",                      "",                                                  0,
+  "Viper Sound Engine",              "",                                                  1
+);  
+
 selectbox(
   "Sounds",
   "Which Ringtone- Notification- and Alarmtones do you want to use?",
@@ -85,7 +94,7 @@ viewbox(
 	"To quit, please press Search-Key\n"+
 	"and choose quit installation.\n\n"+
 	"If you want to check your settings please press\n"+
-	"bitte auf Überprüfen.",
+	"please check.",
 	"icons/alert"
 );
 
@@ -98,8 +107,8 @@ install(
 	"icons/install"
 );
 
-ini_set("text_next", "Beenden!");
-ini_set("text_back", "< Zurück");
+ini_set("text_next", "Quit!");
+ini_set("text_back", "< Back");
 
 viewbox(
 	"It's DONE !!",
