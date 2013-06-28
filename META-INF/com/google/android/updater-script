@@ -1008,6 +1008,28 @@ package_extract_dir("gpsconf/1.CONTINENTS/South-America/system", "/system");
 ui_print("gps.conf file updated, the gps is now more accurate and locks faster...");
 endif;
 
+#Music Player
+if
+		file_getprop("/tmp/aroma-data/musik.prop","selected.0") == "1"
+	then
+	ui_print("- Flashing Stock Htc Musik Player...");
+		package_extract_dir("music/stock", "/system/app");
+	endif;	
+
+if
+		file_getprop("/tmp/aroma-data/musik.prop","selected.0") == "2"
+	then
+	ui_print("- Flashing Noozy Player...");
+		package_extract_dir("music/noozy", "/system/app");
+	endif;
+
+if
+		file_getprop("/tmp/aroma-data/musik.prop","selected.0") == "3"
+	then
+	ui_print("- Flashing Googles Player...");
+		package_extract_dir("music/playmusic", "/system/app");
+	endif;
+
 #Sound Mods
 if
 		file_getprop("/tmp/aroma-data/msound.prop","item.0.1") == "1"

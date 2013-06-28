@@ -141,6 +141,16 @@ selectbox(
   "South America","",0
 );
 
+selectbox(
+  "Music",
+  "Which Music Player do you want to use ?",
+  "icons/apps",
+  "musik.prop",
+  "Stock",                    "Stock Htc Music Player",                                                              1,
+  "Noozy",                    "Windowsphone look-alike music player with integrated equalizer",                      0,
+  "Playmusic",                "Googles Music Player",                                                                0
+);  
+
 checkbox(
   "Sound mods",
   "Select your favourite Sound mods",
