@@ -1107,6 +1107,35 @@ if
 	ui_print("- Flashing no mail apps...");	
 	endif;
 
+#Themes
+if
+        file_getprop("/tmp/aroma-data/theme.prop","selected.0") == "1"
+	then
+    ui_print("-Flashing Stock HTC look...");
+        package_extract_dir("theme/stock", "/system");
+	endif;	
+
+if
+        file_getprop("/tmp/aroma-data/theme.prop","selected.0") == "2"
+	then
+    ui_print("-Flashing cyense look...");
+        package_extract_dir("theme/cyense", "/system");
+	endif;
+
+if
+        file_getprop("/tmp/aroma-data/theme.prop","selected.0") == "3"
+	then
+    ui_print("-Flashing jaggy look...");
+        package_extract_dir("theme/jaggy", "/system");
+	endif;
+	
+if
+        file_getprop("/tmp/aroma-data/theme.prop","selected.0") == "4"
+	then
+    ui_print("-Flashing Nextgen look...");
+        package_extract_dir("theme/nextgen", "/system");
+	endif;	
+	
 #MEmory extanasion
 if
 		file_getprop("/tmp/aroma-data/memory.prop","selected.0") == "1"

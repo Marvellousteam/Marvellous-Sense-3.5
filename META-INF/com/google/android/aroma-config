@@ -173,7 +173,7 @@ selectbox(
 
 selectbox(
   "Email",
-  "Which Email app do you wnat to use ?",
+  "Which Email app do you want to use ?",
   "icons/apps",
   "zmail.prop",
   "Htc",                      "Stock Htc Sense2.1 mail app ",                                                        1,
@@ -181,6 +181,17 @@ selectbox(
   "Both",                     "Htc mail + Google mail",                                                              0,
   "No",                       "I didn't want to have any mail app",                                                  0
 );  
+
+selectbox(
+  "Theme",
+  "Which Theme should be flashed?",
+  "icons/apps",
+  "theme.prop",
+  "Stock",                               "Stock Htc Design",                                                             0,
+  "Cyense",                              "Cyense Design by Mazer.one",                                                   0,
+  "Jaggy",                               "Jaggy rom style from jaggy rom of pico",                                       0,
+  "Nextgen",                             "Nextgen style from nextgen rom of pico",                                       0
+);
 
 selectbox(
    "Memory twekas",
