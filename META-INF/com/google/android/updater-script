@@ -1008,6 +1008,28 @@ package_extract_dir("gpsconf/1.CONTINENTS/South-America/system", "/system");
 ui_print("gps.conf file updated, the gps is now more accurate and locks faster...");
 endif;
 
+#Browser
+if
+		file_getprop("/tmp/aroma-data/internet.prop","selected.0") == "1"
+	then
+	ui_print("- Flashing Stock Htc Sense 3.5 Browser...");
+		package_extract_dir("browser/stock", "/system/app");
+	endif;		
+
+if
+		file_getprop("/tmp/aroma-data/internet.prop","selected.0") == "2"
+	then
+	ui_print("- Flashing Opera Mini Browser...");
+		package_extract_dir("browser/opera", "/system/app");
+	endif;		
+
+if
+		file_getprop("/tmp/aroma-data/internet.prop","selected.0") == "3"
+	then
+	ui_print("- Flashing Boat Mini Browser...");
+		package_extract_dir("browser/boat", "/system/app");
+	endif;
+
 #Music Player
 if
 		file_getprop("/tmp/aroma-data/musik.prop","selected.0") == "1"

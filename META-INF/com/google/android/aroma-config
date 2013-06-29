@@ -142,6 +142,16 @@ selectbox(
 );
 
 selectbox(
+  "Browser",
+  "Which Browser do you want to use?",
+  "icons/apps",
+  "internet.prop",
+  "Stock",                  "Stock Htc Sense 3.5 Browser",                                                          1,
+  "Opera mini",             "Extremly fast Browser by opera. Also saves your small amount of 2g/3g data usage ",   0,
+  "Boat Browser mini",      "Also quick and fast:",                                                                0
+);
+
+selectbox(
   "Music",
   "Which Music Player do you want to use ?",
   "icons/apps",
