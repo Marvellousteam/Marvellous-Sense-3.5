@@ -233,69 +233,7 @@ symlink("toolbox", "/system/bin/vmstat");
 symlink("toolbox", "/system/bin/watchprops");
 symlink("toolbox", "/system/bin/wipe");
 
-ui_print("@Kernel installation");
-# KERNELS
-if
-    file_getprop("/tmp/aroma/mods.prop","selected.1") == "1"
-then
-  ui_print("@Installing m1ndh4x8r Kernel");
-      package_extract_dir("devicesupport/marvel/m1ndh4x8r/kernel", "/tmp");
-  write_raw_image("/tmp/boot.img", "boot");
-  delete("/tmp/boot.img");
-      package_extract_dir("devicesupport/marvel/m1ndh4x8r/system", "/system");
-endif;
-
-if
-    file_getprop("/tmp/aroma/mods.prop","selected.1") == "2"
-then
-  ui_print("@Installing stock Kernel");
-      package_extract_dir("devicesupport/marvel/stock/kernel", "/tmp");
-  write_raw_image("/tmp/boot.img", "boot");
-  delete("/tmp/boot.img"); 
-      package_extract_dir("devicesupport/marvel/stock/system", "/system");
-endif;
-
-if
-    file_getprop("/tmp/aroma/mods.prop","selected.1") == "3"
-then
-  ui_print("@Installing Dust Kernel");
-      package_extract_dir("devicesupport/marvel/Dustv9/kernel", "/tmp");
-  write_raw_image("/tmp/boot.img", "boot");
-  delete("/tmp/boot.img");
-      package_extract_dir("devicesupport/marvel/Dustv9/system", "/system");
-endif;	
-
-if
-    file_getprop("/tmp/aroma/mods.prop","selected.1") == "4"
-then
-  ui_print("@Installing Stock+ Kernel");
-      package_extract_dir("devicesupport/marvel/stock2/kernel", "/tmp");
-  write_raw_image("/tmp/boot.img", "boot");
-  delete("/tmp/boot.img");
-      package_extract_dir("devicesupport/marvel/stock2/system", "/system");
-endif;
-
-if
-    file_getprop("/tmp/aroma/mods.prop","selected.1") == "5"
-then
-  ui_print("@Installing Disciplexone v1.2 Kernel");
-      package_extract_dir("devicesupport/marvel/disci1.2/kernel", "/tmp");
-  write_raw_image("/tmp/boot.img", "boot");
-  delete("/tmp/boot.img");
-      package_extract_dir("devicesupport/marvel/disci1.2/system", "/system");
-endif;
-
-if
-    file_getprop("/tmp/aroma/mods.prop","selected.1") == "6"
-then
-  ui_print("Installing Dust v9 600mhz at boot");
-      package_extract_dir("devicesupport/marvel/dustv9_600mhz/kernel", "/tmp");
-  write_raw_image("/tmp/boot.img", "boot");
-  delete("/tmp/boot.img");
-      package_extract_dir("devicesupport/marvel/dustv9_600mhz/system", "/system");
-	  set_perm(0, 0, 0777, "/system/etc/init.d/88performance");
-endif;
-
+set_progress(0.75);
 
 ###Gps Config
 
@@ -1207,16 +1145,9 @@ if
     ui_print("-Flashing cyense look...");
         package_extract_dir("theme/cyense", "/system");
 	endif;
-
-if
-        file_getprop("/tmp/aroma-data/theme.prop","selected.0") == "3"
-	then
-    ui_print("-Flashing jaggy look...");
-        package_extract_dir("theme/jaggy", "/system");
-	endif;
 	
 if
-        file_getprop("/tmp/aroma-data/theme.prop","selected.0") == "4"
+        file_getprop("/tmp/aroma-data/theme.prop","selected.0") == "3"
 	then
     ui_print("-Flashing Nextgen look...");
         package_extract_dir("theme/nextgen", "/system");
@@ -1278,6 +1209,9 @@ symlink("/system/xbin/busybox", "/system/bin/busybox");
 package_extract_file("installbusybox", "/tmp/installbusybox");
 set_perm(0, 0, 0777, "/tmp/installbusybox");
 run_program("/tmp/installbusybox");
+assert(package_extract_file("boot.img", "/tmp/boot.img"),
+       write_raw_image("/tmp/boot.img", "boot"),
+       delete("/tmp/boot.img"));
 set_progress(0.95);
-set_progress(1.0);
 unmount("/system");
+set_progress(1.0);

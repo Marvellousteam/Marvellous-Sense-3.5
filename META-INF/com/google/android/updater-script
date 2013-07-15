@@ -1145,16 +1145,9 @@ if
     ui_print("-Flashing cyense look...");
         package_extract_dir("theme/cyense", "/system");
 	endif;
-
-if
-        file_getprop("/tmp/aroma-data/theme.prop","selected.0") == "3"
-	then
-    ui_print("-Flashing jaggy look...");
-        package_extract_dir("theme/jaggy", "/system");
-	endif;
 	
 if
-        file_getprop("/tmp/aroma-data/theme.prop","selected.0") == "4"
+        file_getprop("/tmp/aroma-data/theme.prop","selected.0") == "3"
 	then
     ui_print("-Flashing Nextgen look...");
         package_extract_dir("theme/nextgen", "/system");
@@ -1171,20 +1164,15 @@ if
 if
 		file_getprop("/tmp/aroma-data/memory.prop","selected.0") == "2"
 	then
-	ui_print("- Flashing  Data2Sd...");
-		 package_extract_dir("memory/data2whatever/system", "/system");
-      package_extract_dir("memory/data2whatever/data", "/data");
-      set_perm(0, 2000, 0755, "/system/etc/init.d/01data2whatever");
-      set_perm(0, 2000, 0755, "/system/etc/init.d/98zipalign");
-      set_perm(0, 2000, 0755, "/system/etc/init.d/991complete");
-      set_perm(0, 2000, 0755, "/system/xbin/e2fsck");
-      set_perm(0, 2000, 0755, "/system/xbin/tune2fs");
-      set_perm(0, 2000, 0755, "/system/xbin/mkfs.ext4");
-      set_perm(1000, 1000, 771, "/system/data_internal");
-      symlink("/system/xbin/e2fsck", "/system/bin/e2fsck");
-      symlink("/system/xbin/tune2fs", "/system/bin/tune2fs");
-      symlink("/system/xbin/mkfs.ext4", "/system/bin/mkfs.ext4");
-      symlink("/system/data_internal/mtab", "/system/etc/mtab");
+	ui_print("- Flashing  Int2ext+...");
+		package_extract_dir("memory/Int2ext+", "/system/etc/init.d");
+	endif;
+	
+if
+		file_getprop("/tmp/aroma-data/memory.prop","selected.0") == "3"
+	then
+	ui_print("- Flashing  Int2ext...");
+		package_extract_dir("memory/Int2ext", "/system/etc/init.d");
 	endif;	
 
 ui_print("Setting permissions");
@@ -1222,3 +1210,4 @@ assert(package_extract_file("boot.img", "/tmp/boot.img"),
 set_progress(0.95);
 unmount("/system");
 set_progress(1.0);
+ui_print("Enjoy");

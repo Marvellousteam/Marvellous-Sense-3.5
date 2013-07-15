@@ -199,7 +199,6 @@ selectbox(
   "theme.prop",
   "Stock",                               "Stock Htc Design",                                                             0,
   "Cyense",                              "Cyense Design by Mazer.one",                                                   0,
-  "Jaggy",                               "Jaggy rom style from jaggy rom of pico",                                       0,
   "Nextgen",                             "Nextgen style from nextgen rom of pico",                                       0
 );
 
@@ -209,8 +208,10 @@ selectbox(
    "icons/apps",
    "memory.prop",
    "Link2sd.",                      "Link2sd: Must be activated in system to work",                                    0,
-   "Data2SD",                       "A background Script like Data2sd, fast but needs some space ",                    0
+   "Int2ext+",                      "A background Script like Data2sd, fast but needs some space ",                    0,
+   "Int2ext",                       "Just like Data2sd",                                                               1
 );   
+     
    
    
 ini_set("text_next", "Install!");

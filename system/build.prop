@@ -167,9 +167,6 @@ ro.media.enc.vid.m4v.fps       = 1,30
 #
 ro.media.dec.jpeg.memcap 	= 20000000
 
-# try to disable proximity sensor in call by default
-#gsm.proximity.enable=false
-
 # For FOTA setting (leave empty value to use default)
 ro.htc.checkin.url = http://andchin.htc.com/android/checkin
 ro.htc.checkin.crashurl = http://andchin.htc.com/android/crash

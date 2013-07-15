@@ -44,21 +44,6 @@ agreebox(
 );
 
 selectbox(
-  "<~install.features>",
-  "<~install.features2>",
-  "@default",
-  "mods.prop",
- 
-  "Kernel",					  "",															    2,
-  "Overclockable",			  "m1ndh4x8r's overclockable kernel",					            0,
-  "Stable",			          "Stock non-oc kernel only supports ext2 and3",	                1,
-  "Dust 9.0",                 "Performance Kernel which is overclocked to 787mhz at boot",      0,
-  "Stock moddified",          "A moddified stock kernel by Crossfire 77 with ext4 support",     0,
-  "Disciplexone1.2",          "Performance kernel by disciplexone- Overclockable up to 825mhz", 0,
-  "Dustv9 600mhz",            "Dust v9 kernel with 600mhz at boot",                             0
-); 
-
-selectbox(
   "GPS Configuration",
   "Select your country from the list below",
   "@customize",
@@ -214,7 +199,6 @@ selectbox(
   "theme.prop",
   "Stock",                               "Stock Htc Design",                                                             0,
   "Cyense",                              "Cyense Design by Mazer.one",                                                   0,
-  "Jaggy",                               "Jaggy rom style from jaggy rom of pico",                                       0,
   "Nextgen",                             "Nextgen style from nextgen rom of pico",                                       0
 );
 
