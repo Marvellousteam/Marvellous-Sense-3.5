@@ -26,8 +26,8 @@ viewbox(
 	"\n\n\n\n\n\n\n\n\n\n"+
 	"<#0000ff>Welcome!</#>\n\n\n\n"+
 	"You are about to flash Marvellous Sense.\n\n"+
-	"<b>Build: v1 -RC</b>\n"+
-	"<b>Datum: 30.06.2013</b>\n\n"+
+	"<b>Build: v2 -RC</b>\n"+
+	"<b>Datum: 19-07-2013</b>\n\n"+
 	"Please click next to go on."+
 	"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"+
 	"by Kevinjoa, Mazer.one, Disciplexone (cool kernels)",
@@ -222,6 +222,24 @@ selectbox(
 );	
 
 selectbox(
+    "Lockscreen",
+    "Which Lockscreen do you wanna use ?",
+    "icons/apps",
+    "lockscreen.prop",
+    "Stock",                           "Stock Htc Lockscreeen",                                                          0,
+	"Marvellous-Cyense",               "A new cool Lockscreen by Mazer.one",                                             1
+);	
+
+selectbox(
+   "SMS/MMS",
+   "Which SMS/MMS App möchten sie haben?",
+   "icons/apps",
+   "mms.prop",
+   "Stock",                            "Stock Htc look SMS/MMS app",                                                     0,
+   "Marvellous-Cyense",                "A new cool SMS/MMS app by Mazer.one",                                            1
+);   
+
+selectbox(
   "Bootanimation",
   "Which bootanimation do you want to watch at boot ?",
   "icons/customize",
@@ -271,7 +289,7 @@ ini_set("text_back", "< Back");
 viewbox(
 	"It's DONE !!",
 	"\n\n\n\n\n\n\n"+
-	"The MarvellousSebse-ROM is sucssesfully flashed.\n\n"+
+	"The MarvellousSense-ROM is sucssesfully flashed.\n\n"+
 	"First boot can take a while ,so please wait.\n\n"+
 	"Enjoy your customized phone!",
 	"icons/install"
