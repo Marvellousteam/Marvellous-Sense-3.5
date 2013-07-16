@@ -1142,18 +1142,73 @@ if
 if
         file_getprop("/tmp/aroma-data/theme.prop","selected.0") == "2"
 	then
-    ui_print("-Flashing cyense look...");
+    ui_print("-Flashing Cyense look...");
+        package_extract_dir("theme/newcyense", "/system");
+	endif;
+
+if
+        file_getprop("/tmp/aroma-data/theme.prop","selected.0") == "3"
+	then
+    ui_print("-Flashing NEW/MARVELLOUS Cyense look...");
         package_extract_dir("theme/cyense", "/system");
 	endif;
 	
 if
-        file_getprop("/tmp/aroma-data/theme.prop","selected.0") == "3"
+        file_getprop("/tmp/aroma-data/theme.prop","selected.0") == "4"
 	then
     ui_print("-Flashing Nextgen look...");
         package_extract_dir("theme/nextgen", "/system");
 	endif;	
+
+#Dialer
+
+if
+        file_getprop("/tmp/aroma-data/dialer.prop","selected.0") == "1"
+	then
+    ui_print("-Flashing Stock HTC look Dialer...");
+		package_extract_dir("dialer/stock", "/system/app");
+	endif;
+
+if
+        file_getprop("/tmp/aroma-data/dialer.prop","selected.0") == "2"
+	then
+    ui_print("-Flashing Marvellous-Cyense look Dialer...");
+		package_extract_dir("dialer/marvellouscyense", "/system/app");
+	endif;	
+
+#Clock-widget
+
+if
+		file_getprop("/tmp/aroma-data/clock.prop","selected.0") == "1"
+	then
+	ui_print("- Flashing Stock clock-widget...");
+		package_extract_dir("clock/stock", "/system/app");
+	endif;
+
+if
+		file_getprop("/tmp/aroma-data/clock.prop","selected.0") == "2"
+	then
+	ui_print("- Flashing Marvellous-Cyemse clock-widget...");
+		package_extract_dir("clock/marvellouscyense", "/system/app");
+	endif;
 	
-#MEmory extanasion
+#Bootanimation
+
+if
+        file_getprop("/tmp/aroma-data/yourbootanimi.prop","selected.0") == "1"
+	then
+    ui_print("-Flashing Marvellous bootanimation...");
+        package_extract_dir("bootanimi/marvellous/customize", "/system/customize");
+	endif;	
+
+if
+        file_getprop("/tmp/aroma-data/yourbootanimi.prop","selected.0") == "2"
+	then
+    ui_print("-Flashing :new:marvellous cyense bootanimation...");
+        package_extract_dir("bootanimi/marvellouscyense/customize", "/system/customize");
+	endif;
+	
+#Memory extanasion
 if
 		file_getprop("/tmp/aroma-data/memory.prop","selected.0") == "1"
 	then

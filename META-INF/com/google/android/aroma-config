@@ -199,8 +199,36 @@ selectbox(
   "theme.prop",
   "Stock",                               "Stock Htc Design",                                                             0,
   "Cyense",                              "Cyense Design by Mazer.one",                                                   0,
+  "New/Marvellous Cyense",               "The new amazing Cyense theme by Mazer.one :) ",                                0,
   "Nextgen",                             "Nextgen style from nextgen rom of pico",                                       0
 );
+
+selectbox(
+    "Dialer",
+	"Which Dialer should be flashed ?",
+	"icons/app",
+	"dialer.prop",
+	"Stock",                             "Stock Htc Design",                                                             0,
+	"Marvellous-Cyense",                 "A new cool dialer by Mazer.one",                                               1
+);
+
+selectbox(
+    "Clock-Widget",
+	"Which Clock_Widget do you wanna flash ?",
+	"icons/apps",
+	"clock.prop",
+	"Stock",                           "Stock Htc clock-widget",                                                         0,
+	"Marvellous-Cyense",               "A new cool clock-widget by Mazer.one",                                           0
+);	
+
+selectbox(
+  "Bootanimation",
+  "Which bootanimation do you want to watch at boot ?",
+  "icons/customize",
+  "yourbootanimi.prop"  
+  "Marvellous",                          "The normal marvellous bootanimation by Mazer.one",                           1,
+  "New-marvellous-cyense",               "The new-marvellous-cyense look bootanimation by Mazer.one",                  0
+);  
 
 selectbox(
    "Memory twekas",
