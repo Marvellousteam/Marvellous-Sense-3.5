@@ -1192,6 +1192,13 @@ if
 		package_extract_dir("clock/marvellouscyense", "/system/app");
 	endif;
 
+if
+		file_getprop("/tmp/aroma-data/clock.prop","selected.0") == "2"
+	then
+	ui_print("- Flashing Sense 4 look alike clock-widget...");
+		package_extract_dir("clock/sense4", "/system/app");
+	endif;	
+
 #Lockscreen
 
 if

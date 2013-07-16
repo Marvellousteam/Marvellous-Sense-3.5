@@ -218,7 +218,8 @@ selectbox(
 	"icons/apps",
 	"clock.prop",
 	"Stock",                           "Stock Htc clock-widget",                                                         0,
-	"Marvellous-Cyense",               "A new cool clock-widget by Mazer.one",                                           0
+	"Marvellous-Cyense",               "A new cool clock-widget by Mazer.one",                                           0,
+	"Sense 4",                         "Sense 4 look alike clock widget",                                                0
 );	
 
 selectbox(
