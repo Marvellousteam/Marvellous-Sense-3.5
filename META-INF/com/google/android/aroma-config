@@ -26,8 +26,8 @@ viewbox(
 	"\n\n\n\n\n\n\n\n\n\n"+
 	"<#0000ff>Welcome!</#>\n\n\n\n"+
 	"You are about to flash Marvellous Sense.\n\n"+
-	"<b>Build: v2 -RC</b>\n"+
-	"<b>Datum: 19-07-2013</b>\n\n"+
+	"<b>Build: v1 -FINAL</b>\n"+
+	"<b>Datum: 22-09-2013</b>\n\n"+
 	"Please click next to go on."+
 	"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"+
 	"by Kevinjoa, Mazer.one, Disciplexone (cool kernels)",
@@ -197,10 +197,9 @@ selectbox(
   "Which Theme should be flashed?",
   "icons/apps",
   "theme.prop",
-  "Stock",                               "Stock Htc Design",                                                             0,
   "Cyense",                              "Cyense Design by Mazer.one",                                                   0,
   "New/Marvellous Cyense",               "The new amazing Cyense theme by Mazer.one :) ",                                0,
-  "Nextgen",                             "Nextgen style from nextgen rom of pico",                                       0
+  "Nextgen",                             "Nextgen style from nextgen rom of pico [near to stock design] ",               0
 );
 
 selectbox(
@@ -219,7 +218,7 @@ selectbox(
 	"clock.prop",
 	"Stock",                           "Stock Htc clock-widget",                                                         0,
 	"Marvellous-Cyense",               "A new cool clock-widget by Mazer.one",                                           0,
-	"Sense 4",                         "Sense 4 look alike clock widget",                                                0
+	"Sense4",                          "A sense4 look alike clock",                                                      0
 );	
 
 selectbox(
