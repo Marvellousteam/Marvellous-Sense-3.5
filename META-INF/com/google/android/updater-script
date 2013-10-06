@@ -5,7 +5,7 @@ ui_print(" A production made by       ");
 ui_print("  *Kevinjoa deving          "); 
 ui_print("  *Mazer.One theming- He's the best in it :D"); 
 ui_print("  *Disciplexone -kernels"); 
-ui_print("  *Hintay; Idogx and mindhaxor for Sense 3.5 rom"); 
+ui_print("  *Hintay; Idogx and baluuu for Sense 3.5 rom"); 
 ui_print("  *Htc for .sense and everyone I forgot :D");
 
 set_progress(0.05);
@@ -1131,24 +1131,30 @@ if
 	ui_print("- Flashing no mail apps...");	
 	endif;
 
-#Themes	
-
+#Themes
 if
         file_getprop("/tmp/aroma-data/theme.prop","selected.0") == "1"
 	then
-    ui_print("-Flashing Cyense look...");
-        package_extract_dir("theme/cyense", "/system");
-	endif;
+    ui_print("-Flashing Stock HTC look...");
+        package_extract_dir("theme/stock", "/system");
+	endif;	
 
 if
         file_getprop("/tmp/aroma-data/theme.prop","selected.0") == "2"
 	then
-    ui_print("-Flashing NEW/MARVELLOUS Cyense look...");
+    ui_print("-Flashing Cyense look...");
         package_extract_dir("theme/newcyense", "/system");
+	endif;
+
+if
+        file_getprop("/tmp/aroma-data/theme.prop","selected.0") == "3"
+	then
+    ui_print("-Flashing NEW/MARVELLOUS Cyense look...");
+        package_extract_dir("theme/cyense", "/system");
 	endif;
 	
 if
-        file_getprop("/tmp/aroma-data/theme.prop","selected.0") == "3"
+        file_getprop("/tmp/aroma-data/theme.prop","selected.0") == "4"
 	then
     ui_print("-Flashing Nextgen look...");
         package_extract_dir("theme/nextgen", "/system");
@@ -1187,7 +1193,7 @@ if
 	endif;
 
 if
-		file_getprop("/tmp/aroma-data/clock.prop","selected.0") == "3"
+		file_getprop("/tmp/aroma-data/clock.prop","selected.0") == "2"
 	then
 	ui_print("- Flashing Sense 4 look alike clock-widget...");
 		package_extract_dir("clock/sense4", "/system/app");

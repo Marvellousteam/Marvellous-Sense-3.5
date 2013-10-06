@@ -1,0 +1,7 @@
+#!/system/bin/sh
+
+echo "scary" > /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
+echo "122880" > /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
+echo "768000" > /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq
+echo "sio" > /sys/block/mmcblk0/queue/scheduler
+
