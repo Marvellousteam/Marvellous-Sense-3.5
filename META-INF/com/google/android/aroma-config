@@ -26,8 +26,8 @@ viewbox(
 	"\n\n\n\n\n\n\n\n\n\n"+
 	"<#0000ff>Welcome!</#>\n\n\n\n"+
 	"You are about to flash Marvellous Sense.\n\n"+
-	"<b>Build: v2 -RC</b>\n"+
-	"<b>Datum: 19-07-2013</b>\n\n"+
+	"<b>Build: v3 -RC</b>\n"+
+	"<b>Datum: 06-10-2013</b>\n\n"+
 	"Please click next to go on."+
 	"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"+
 	"by Kevinjoa, Mazer.one, Disciplexone (cool kernels)",
@@ -146,7 +146,7 @@ selectbox(
   "Which Browser do you want to use?",
   "icons/apps",
   "internet.prop",
-  "Stock",                  "Stock Htc Sense 3.5 Browser",                                                          1,
+  "Stock",                  "Stock Htc Sense 3.5 Browser",                                                         1,
   "Opera mini",             "Extremly fast Browser by opera. Also saves your small amount of 2g/3g data usage ",   0,
   "Boat Browser mini",      "Also quick and fast:",                                                                0
 );
